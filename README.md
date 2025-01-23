@@ -30,3 +30,56 @@
 - 3. This indicates a remote server.
 
 
+# Difference b/w  Commonjs(cjs) and Modulejs(mjs)  
+- Commonjs(eg. const file = require('fs')) is used only in node.js ok
+- Module.export = {f1,f2,f3 ...}
+- No need to write "type":"module" in package.json
+- Modulejs(eg. import file from 'fs') latest one according to ES6  recommended
+- export {f1,f2,f3...}
+- In package.json, need to specify the "type":"module"
+
+
+# What is HTTP?
+- HTTP (HyperText Transfer Protocol) is the foundation of communication on the web. It defines how data is exchanged between a browser (client) and a web server.
+
+# Key Points:
+- Protocol: A set of rules that allows devices to communicate.
+- Stateless: Each request is independent and does not remember previous requests.
+- Based on TCP/IP: HTTP works on top of the TCP/IP protocol for reliable data transmission. 3 ways handsake(To establisize connection)
+- It is universal and platform independent
+- Used in servers communication as well , eg RESTFULL API based communication 
+- Usage: Accessing web pages, APIs, and downloading resources like images, videos, or documents.
+- Browser's primary protocol 
+
+
+# HMR  Hot module reload
+- npm install --save-dev nodemon
+
+
+# Express
+- It is http server's framework, that creates the server smoothly, increase testability, readablity etc.
+- All Route always start with '/' in express ok.(vvImportant)
+- send() is a method which is used to send any kind of the data eg. array, json, etc.
+
+# Middleware 
+- Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the - application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
+- middleware having some steps
+- Execute any code.
+- Make changes to the request and the response objects.
+- End the request-response cycle.
+- Call the next middleware function in the stack.
+- An Express application can use the following types of middleware:
+- Application-level middleware
+- Router-level middleware
+- Error-handling middleware
+- Built-in middleware
+- Third-party middleware
+
+
+
+
+
+
+
+
+

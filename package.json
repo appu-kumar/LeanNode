@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "- It is a run time environment for the js, It is v8+API(file system, i/0, connect to db, createServer... etc ) - package.json is configuration file of your node.js project ok",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon serverWithExpressAndMiddleware.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/appu-kumar/LeanNode/issues"
   },
-  "homepage": "https://github.com/appu-kumar/LeanNode#readme"
+  "homepage": "https://github.com/appu-kumar/LeanNode#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
