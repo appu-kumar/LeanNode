@@ -103,6 +103,21 @@
 - It converts the raw request body into a JavaScript object and attaches it to the req.body property.
 - It is used when your application needs to handle incoming JSON data in HTTP requests, especially with methods like POST, PUT, or PATCH.
 
+# mongoose 
+- Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It provides a schema-based solution to model your application data, enabling easy validation, relationships between data, and the use of middleware.
+- Schema
+- A schema defines the structure of documents in a MongoDB collection. It specifies the field names, types, and validation rules.
+- const userSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    age: { type: Number, min: 0 },
+    email: { type: String, unique: true, required: true },
+    createdAt: { type: Date, default: Date.now },
+    isAdmin: { type: Boolean, default: false },
+});
+
+- model
+- A model is a wrapper for a schema that allows interaction with a specific collection in MongoDB.
+- const User = mongoose.model('User', userSchema);
 
 
 
