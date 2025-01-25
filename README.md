@@ -76,6 +76,35 @@
 - Third-party middleware
 
 
+# MongoDB vs Nosql
+1. MongoDB(Nosql)
+- NoSQL database.
+- Stores data in JSON-like documents called BSON (Binary JSON).
+- Schema is flexible; fields can vary from document to document.
+- If you want to store highly scalable data, then you can go with this
+- show dbs
+- use test           If there is no any collection with this name, then it will create the test collection
+- show collections
+- db.test.find()     It will give all documents of the test collection
+- db.createCollection("nameOfthecollection")
+
+
+
+2. Mysql(SQL) 
+- Relational database.
+- Stores data in tables with rows and columns.
+- Schema is strict; a fixed structure (e.g., column names and data types) must be defined.
+- If you want structure data then you can go with Mysql
+
+
+# server.use(express.json());
+- express.json() is a built-in middleware function in Express.js.
+- It parses incoming requests with JSON payloads and is based on the body-parser library.
+- It converts the raw request body into a JavaScript object and attaches it to the req.body property.
+- It is used when your application needs to handle incoming JSON data in HTTP requests, especially with methods like POST, PUT, or PATCH.
+
+
+
 
 
 
