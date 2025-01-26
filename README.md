@@ -120,6 +120,11 @@
 - const User = mongoose.model('User', userSchema);
 
 
+# mysql2 
+- mysql2 is an ORM tool, That execute the mysql query using js(node.js)
+- https://sidorares.github.io/node-mysql2/docs
+
+
 
 
 

@@ -1,7 +1,20 @@
 import mongoose from "mongoose";
+import mysql from "mysql2/promise";
 
-const uri =
+// mongoose
+const mongoDbUri =
   "mongodb+srv://root:root@cluster0.blfaipp.mongodb.net/mytest?retryWrites=true&w=majority&appName=Cluster0";
-const connection = mongoose.connect(uri); // it returns promise
+export const connection = mongoose.connect(mongoDbUri); // it returns promise
 
-export default connection;
+
+// mysql2
+export const mysqlConnection = await mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  database: "imdb",
+  password:"root@123"
+});
+
+
+
+
