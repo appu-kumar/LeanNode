@@ -121,7 +121,7 @@
 
 
 # mysql2 
-- mysql2 is an ORM tool, That execute the mysql query using js(node.js)
+- mysql2 is an ORM tool, That execute the mysql query in  js(node.js) and express.js
 - https://sidorares.github.io/node-mysql2/docs
 
 
