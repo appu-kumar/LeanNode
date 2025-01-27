@@ -120,9 +120,29 @@
 - const User = mongoose.model('User', userSchema);
 
 
-# mysql2 
-- mysql2 is an ORM tool, That execute the mysql query in  js(node.js) and express.js
+# mysql2 (It is like a jdbc)
+- MySQL2 is a popular Node.js library used to interact with MySQL databases. It provides an interface to execute SQL queries, connect to MySQL servers, and handle database operations in a Node.js application. MySQL2 is an improved and more modern version of the older mysql library, offering better performance and additional features.
 - https://sidorares.github.io/node-mysql2/docs
+- Following are the ORM That are built for node.js and express.js
+- Sequalize
+- Typeorm(same as hibernate)
+- Prisma
+
+
+
+# Authentication And Autherization
+- Authentication then Autherization
+- # Authentication means
+- 1. Process of allowing user
+- 2. Login and singup 
+- 3. You don't know the user
+- 4. Identity
+
+- # Authorization
+- 1. You know the user
+- 2. But user doesn't have access to the resource
+- 3. Access 
+
 
 
 
