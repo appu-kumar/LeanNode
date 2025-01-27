@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon serverWithMysql.js"
+    "dev": "nodemon serverWithWebTokenJWT.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.5",
     "mysql2": "^3.12.0"
   }

@@ -1,3 +1,4 @@
+import { request } from "express";
 import { model, Schema } from "mongoose";
 // created schema 
 const movieSchema = new Schema({
@@ -13,11 +14,29 @@ const movieSchema = new Schema({
     releaseDate:Date
 })
 
+const userSchema = new Schema({
+    name:{
+        type:String,
+        required:true,
+    },
+    email:{
+        type:String,
+        request:true,
+        unique:true,
+    },
+    password:{
+        type:String,
+        required:true,
+    },
+    age:Number
+})
+
 // create model
 // 'movie' must be singular, mongoose will convert into plural
-const movieModel = model('movie',movieSchema);
+export const movieModel = model('movie',movieSchema);
 
-export default movieModel;
+export const userModel = model('user',userSchema);
+
 
 
 

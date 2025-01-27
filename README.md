@@ -145,6 +145,38 @@
 
 
 
+# JWT (jsonwebtoken---> npm install jsonwebtoken)
+- JWT (JSON Web Token) is a popular standard for securely transmitting information between two parties as a JSON object. It is widely used for user authentication and information exchange because it is compact, self-contained, and secure.
+- A JWT has three parts, separated by dots (.)
+- 1. Header
+- Contains metadata about the token, such as the type of token (JWT) and the signing algorithm used (e.g., HS256 or RS256).
+- {
+  "alg": "HS256",
+  "typ": "JWT"
+}
+- 2. Payload
+- Contains the claims, which are statements about the user or other data. 
+- {
+  "sub": "1234567890",
+  "name": "John Doe",
+  "role": "admin",
+  "iat": 1516239022
+}
+
+- 3. Signature:
+- Ensures the token has not been tampered with. Created by encoding the header and payload, and then signing them using a secret key or private key.
+- HMACSHA256(
+  base64UrlEncode(header) + "." + base64UrlEncode(payload),
+  secret
+)
+
+- # Example
+- eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+# encrypt and decrypt token
+- 1. jwt.sign(payload,secretKey)
+- 2. jwt.verify(token,secretKey)
+- secretKey is constant string
 
 
 
