@@ -8,15 +8,16 @@ const secretKey = "2k18se035";
 
 // Inbuilt middleware that converts the body data into json and put into req.body
 server.use(express.json());
+
 server.post("/signup", async (req, res) => {
-  const { name, email, password } = req.body;
-  const result = await userModel.insertMany({ name, email, password });
+  const { name, email, password,role } = req.body;
+   await userModel.insertMany({ name, email, password,role });
   res.status(200).send("User signed up successfully");
 });
 // authenticate yourself and then get authorization
 // Check login  req.body credentials with db credentials and also create the jwt token , Routes without jwt token are known as public route
 server.post("/login", async (req, res) => {
-  const { name, email, password } = req.body;
+  const { email, password} = req.body;
   const user = await userModel.findOne({ email: email });
   if (!user) {
     res.status(401).send("Invalid credentials");
@@ -26,10 +27,11 @@ server.post("/login", async (req, res) => {
     res.status(401).send("Invalid credentials");
   }
 
-  // some payload and secretKey to encrypt and decrypt
+  // some payload and secretKey to encode and decode
   const token = jwt.sign(
     {
       id: user._id,
+      role:user.role,
     },
     secretKey
   );
@@ -51,8 +53,14 @@ server.use((req, res, next) => {
 
   // decrypting the token
   try {
-    jwt.verify(token, secretKey);
-    next();
+    const decode = jwt.verify(token, secretKey);
+    if(decode.role==='admin' || decode.role==='teacher'){
+        next();   // go to access profile or anything else
+    }
+    else{
+        res.status(401).send('User is not valid');
+    }
+    
   } catch (error) {
     res.status(403).send("Invalid token");
   }

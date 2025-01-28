@@ -28,7 +28,13 @@ const userSchema = new Schema({
         type:String,
         required:true,
     },
-    age:Number
+    role:{
+       type:String,
+       enum:['student','teacher','admin'],
+       default:'student'
+    },
+    age:Number,
+
 })
 
 // create model
