@@ -173,10 +173,20 @@
 - # Example
 - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 
-# encrypt and decrypt token
+# encode and decode token
+- Encoding and Encryption both are reversible process
 - 1. jwt.sign(payload,secretKey)
 - 2. jwt.verify(token,secretKey)
 - secretKey is constant string
+
+# Hashing 
+- It is irreversible process, means If it is hashed then no one might get original text.
+- Used to store the password in DB.
+- During login we hashed our input password and get hashed password from db and  then match both.
+- argon2 lib using to hash the password.
+
+
+
 
 
 

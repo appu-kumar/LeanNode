@@ -21,10 +21,10 @@ const userSchema = new Schema({
     },
     email:{
         type:String,
-        request:true,
+        required:true,
         unique:true,
     },
-    password:{
+    hashedPassword:{
         type:String,
         required:true,
     },
