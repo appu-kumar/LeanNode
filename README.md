@@ -185,6 +185,10 @@
 - During login we hashed our input password and get hashed password from db and  then match both.
 - argon2 lib using to hash the password.
 
+# Connecting Backend with Frontend
+- Create Vite proeject
+
+
 
 
 
