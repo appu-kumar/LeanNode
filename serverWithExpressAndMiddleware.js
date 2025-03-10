@@ -17,6 +17,7 @@ server.get('/',(req,res)=>{
 server.use((req,res,next)=>{                        // if you want to do something before getting product do in middleware ok
     // res.send("middleware at product level")     // ek bar send kar dia then res will be returned from here
     console.log("middleware 1")
+    console.log()
     next();    // it will transfer the control to the next middleware , if you are routing to product next() is used only for next middleware ok
 })
 
